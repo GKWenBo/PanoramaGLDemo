@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3xy-VE-VYX">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Xko-XV-g0h"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Sphere2"/>
+                                    <segment title="Sphere"/>
+                                    <segment title="Cube"/>
+                                    <segment title="Cylinder"/>
+                                    <segment title="Car"/>
+                                    <segment title="SphereRatio"/>
+                                </segments>
+                                <color key="tintColor" red="0.93205672500000003" green="0.62350827460000002" blue="0.012615791520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="segmentControlClicked:" destination="BYZ-38-t0r" eventType="valueChanged" id="Yhf-4N-Ryo"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jmb-J7-ET9" customClass="PLView">
+                                <rect key="frame" x="0.0" y="30" width="375" height="637"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jmb-J7-ET9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3UX-5Z-OFi"/>
+                            <constraint firstItem="jmb-J7-ET9" firstAttribute="top" secondItem="3xy-VE-VYX" secondAttribute="bottom" id="4lu-fA-5df"/>
+                            <constraint firstItem="3xy-VE-VYX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LOr-l3-Cqf"/>
+                            <constraint firstItem="jmb-J7-ET9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Q6Z-19-e04"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3xy-VE-VYX" secondAttribute="trailing" id="Taj-cj-lE0"/>
+                            <constraint firstItem="jmb-J7-ET9" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="axX-LI-3yq"/>
+                            <constraint firstItem="3xy-VE-VYX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fSP-yv-lyt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="plView" destination="jmb-J7-ET9" id="ZUM-p4-aVF"/>
+                        <outlet property="segmentedControl" destination="3xy-VE-VYX" id="cIy-Zz-Z5t"/>
+                        <outlet property="topConstraints" destination="fSP-yv-lyt" id="Sqq-Bg-zFA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="117.39130434782609"/>
+        </scene>
+    </scenes>
+</document>
